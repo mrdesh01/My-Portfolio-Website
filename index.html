@@ -170,9 +170,9 @@
       <h2 class="text-2xl font-bold mb-6">Contact</h2>
       <form action="https://formsubmit.co/mrdesh421@gmail.com" method="POST" class="grid md:grid-cols-3 gap-4">
         <input type="hidden" name="_redirect" value="https://analyze-with-desh.github.io/My-Portfolio-Website/#Contact" />
-        <input type="text" name="name" placeholder="Name" required class="col-span-3 md:col-span-1 border p-2 rounded" />
-        <input type="email" name="email" placeholder="Email" required class="col-span-3 md:col-span-1 border p-2 rounded" />
-        <input type="text" name="message" placeholder="Message" required class="col-span-3 md:col-span-1 border p-2 rounded" />
+        <input type="text" name="name" placeholder="Full Name" required class="col-span-3 md:col-span-1 border p-2 rounded" />
+        <input type="email" name="email" placeholder="Valid Email" required class="col-span-3 md:col-span-1 border p-2 rounded" />
+        <input type="text" name="message" placeholder="What's on your mind?" required class="col-span-3 md:col-span-1 border p-2 rounded" />
         <button type="submit" class="col-span-3 bg-teal-500 hover:bg-teal-600 text-white py-2 rounded">Send Message</button>
       </form>
       <p id="confirmation" class="hidden text-green-600 font-semibold mt-4 text-center">✅ Message was sent successfully!</p>
@@ -186,13 +186,13 @@
     &copy; 2025 M R Desh | All rights reserved.
   </footer>
    <script>
-    function showConfirmation(event) {
-      event.preventDefault(); // prevent form from submitting normally
-      const message = document.getElementById('confirmation');
-      message.classList.remove('hidden');
-      message.classList.add('fade');
-      return false;
+    document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash === "#Contact") {
+      const message = document.getElementById("confirmation");
+      message.classList.remove("hidden");
+      message.classList.add("fade");
     }
+  });
   </script>
 </body>
 </html>
