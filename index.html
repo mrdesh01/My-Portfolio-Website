@@ -1,6 +1,9 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Hi, I'm M R Desh - a data analyst who turns raw data into actionable insights. ">
+  <meta name="keywords" content="M R Desh, Data Analyst, Data visualization, Python, SQL, Power BI, Excel, Portfolio ">
+  <meta name="author" content="M R Desh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M R Desh - Data Analyst</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -9,7 +12,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+        font-family: 'Inter', sans-serif; }
+    .fade { animation: fadeOut 3s ease forwards; }
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; display: none; }
     }
   </style>
 </head>
@@ -167,6 +174,7 @@
         <input type="text" name="message" placeholder="Message" required class="col-span-3 md:col-span-1 border p-2 rounded" />
         <button type="submit" class="col-span-3 bg-teal-500 hover:bg-teal-600 text-white py-2 rounded">Send Message</button>
       </form>
+      <p id="confirmation" class="hidden text-green-600 font-semibold mt-4 text-center">✅ Message was sent successfully!</p>
       <div class="flex gap-4 mt-6 justify-center">
         <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/linkedin.png" /></a>
         <a href="https://github.com/Analyze-With-Desh"><img src="https://img.icons8.com/ios-glyphs/30/github.png" /></a>
@@ -176,5 +184,12 @@
   </section> <!-- Footer --> <footer class="bg-gradient-to-r from-slate-800 to-slate-600 text-center text-white py-6">
     &copy; 2025 M R Desh | All rights reserved.
   </footer>
+   <script>
+    function showConfirmation() {
+      const message = document.getElementById('confirmation');
+      message.classList.remove('hidden');
+      message.classList.add('fade');
+    }
+  </script>
 </body>
 </html>
