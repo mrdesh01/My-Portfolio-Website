@@ -185,10 +185,12 @@
     &copy; 2025 M R Desh | All rights reserved.
   </footer>
    <script>
-    function showConfirmation() {
+    function showConfirmation(event) {
+      event.preventDefault(); // prevent form from submitting normally
       const message = document.getElementById('confirmation');
       message.classList.remove('hidden');
       message.classList.add('fade');
+      return false;
     }
   </script>
 </body>
