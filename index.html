@@ -13,11 +13,13 @@
   <style>
     body {
         font-family: 'Inter', sans-serif; }
-    .fade { animation: fadeOut 3s ease forwards; }
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      100% { opacity: 0; display: none; }
-    }
+   .typing {
+  display: inline-block;
+  min-height: 30px;  /* উচ্চতা ফিক্স করে দিলাম */
+  line-height: 1.2;  /* লাইনের উচ্চতা ঠিক রাখবে */
+  vertical-align: bottom; /* নিচে ঠিকভাবে এলাইন করবে */
+  overflow: hidden;  /* অতিরিক্ত স্পেস লুকাবে */
+}
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -25,7 +27,9 @@
   <section class="bg-gradient-to-r from-slate-800 to-slate-600 text-white py-16 px-6">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I’m <span class="text-teal-400">M R Desh</span><br />Data Analyst</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I’m <span class="text-teal-400">M R Desh</span><br />
+          <span class="text-3xl md:text-4xl font-semibold text-white-300 typing">Data Analyst</span>
+        </h1>
         <p class="text-lg mb-6">Turning raw data into actionable insights.</p>
         <div class="flex gap-4">
           <a href="#projects" class=" inline-block bg-teal-400 text-white px-4 py-2 rounded hover:bg-teal-500 transition">View My Work</a>
@@ -252,6 +256,17 @@
       alert('Error submitting the form. Try again later.');
     });
   });
+</script>
+  <script>
+  setTimeout(function () {
+  var typed = new Typed(".typing", {
+    strings: ["Data Analyst", "Problem Solver", "Business Analyst", "Storyteller with Data"],
+    typeSpeed: 120,
+    backSpeed: 50,
+    loop: true,
+    showCursor: false
+  });
+  }, 7000);
 </script>
 </body>
 </html>
